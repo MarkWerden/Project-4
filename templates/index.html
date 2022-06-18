@@ -28,6 +28,7 @@
 </head>
 
 <body>
+    <div class="tenor-gif-embed" data-postid="3442692" data-share-method="host" data-aspect-ratio="7" data-width="100%"><a href="https://tenor.com/view/la-los-angeles-night-skyline-gif-3442692">Los Angeles Skyline GIF</a>from <a href="https://tenor.com/search/la-gifs">La GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
     <div class="container">
         <div class="jumbotron text-center bg-light">
             <h1>Home Loan Approval Survey</h1>
@@ -36,71 +37,84 @@
     </div>
     <div class="container">
         <p>Select an option for Gender:</p>
-        <form>
+        <form method = "post" id = "myform"> 
             <input type="radio" id="male" name="gender" value="Male">
             <label for="male">Male</label><br>
             <input type="radio" id="female" name="gender" value="Female">
             <label for="male">Female</label><br>
-        </form>
         <br>
         <p>Select an option for Married:</p>
-        <form>
             <input type="radio" id="yes" name="married" value="Yes">
             <label for="yes">Yes</label><br>
             <input type="radio" id="no" name="married" value="No">
             <label for="no">No</label><br>
-        </form>
         <br>
-        <p>(Please use numeric values in the space below):</p>
-        <form>
-            <label for="dependents">Number of Dependents:</label>
-            <input type="text" id="dependents" name="Dependent"><br>
-        </form>
+        <p>Select an option for number of dependents:</p>
+        <input type="radio" id="0" name="dependents" value="0">
+        <label for="0">0</label><br>
+        <input type="radio" id="1" name="dependents" value="1">
+        <label for="1">1</label><br>
+        <input type="radio" id="2" name="dependents" value="2">
+        <label for="2">2</label><br>
+        <input type="radio" id="3+" name="dependents" value="3+">
+        <label for="3+">3+</label><br>
         <br>
         <p>Please select educational level:</p>
-        <form>
             <input type="radio" id="graduate" name="education" value="Graduate">
             <label for="education">Graduate</label><br>
             <input type="radio" id="non-graduate" name="education" value="Non-Graduate">
             <label for="education">Non-Graduate</label><br>
             <br>
-            <form>
                 <p>Please indicate whether you are self-employed:</p>
                 <input type="radio" id="yes" name="employment" value="Yes">
                 <label for="yes">Yes</label><br>
                 <input type="radio" id="no" name="employment" value="No">
                 <label for="no">No</label><br>
-            </form>
             <br>
             <p>(Please use numeric values in the spaces below):</p>
-            <form>
-                <label for="dependents">Applicant Income:</label>
+                <label for="income_applicant">Applicant Income:</label>
                 <input type="text" id="income_applicant" name="income_applicant"><br>
-            </form>
             <br>
-            <form>
-                <label for="dependents">Co-Applicant Income:</label>
+                <label for="income_coapplicant">Co-Applicant Income:</label>
                 <input type="text" id="income_coapplicant" name="income_coapplicant"><br>
-            </form>
             <br>
-            <form>
-                <label for="dependents">Loan Amount:</label>
+                <label for="loan">Loan Amount:</label>
                 <input type="text" id="loan" name="loan"><br>
-            </form>
             <br>
-            <form>
-                <p>Please click "1" if you have a good credit history, otherwise click "0":</p>
+                <p>Please click "1" if you have a credit score of 690+, otherwise click "0":</p>
                 <input type="radio" id="badhistory" name="credit" value="0">
                 <label for="badhistory">0</label><br>
                 <input type="radio" id="goodhistory" name="credit" value="1">
                 <label for="goodhistory">1</label><br>
-            </form>
             <br>
-            <form>
                 <p>If you are done, please click on the submit button below:</p>
                 <input type="submit" value="Submit">
             </form>
+            <br>
+
+            <h4>Loan Status: {{ result }}<h4></h4>
+            <br>
+            <br>
+
     </div>
+    <!-- <script type="text/javascript">
+        $(document).on('submit','#myform',function(e)
+                       {
+          console.log('hello');
+          e.preventDefault();
+          $.ajax({
+            type:'POST',
+            url:'/',
+            data:{
+              todo:$("#todo").val()
+            },
+            success:function()
+            {
+              alert('saved');
+            }
+          })
+        });
+      </script> -->
 </body>
 
 </html>
