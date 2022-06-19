@@ -13,6 +13,5 @@ Interested in figuring out if you've been pre-approved for a home loan? Use our 
 4. Created HTML file with fill out form for user to interact with
 5. Added CSS file to prettify website
 6. Created app.py file with code to map ML model to HTML script
-7. Heroku
 
 ### Data Sources
