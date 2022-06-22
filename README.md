@@ -4,8 +4,6 @@
 
 Interested in figuring out if you've been pre-approved for a home loan? Use our ML model to figure it out!
 
-## xx
-
 ### Project Steps
 1. Found existing loan approval data set
 2. Built ML model 
@@ -15,3 +13,4 @@ Interested in figuring out if you've been pre-approved for a home loan? Use our 
 6. Created app.py file with code to map ML model to HTML script
 
 ### Data Sources
+- https://www.kaggle.com/code/caesarmario/loan-prediction-w-various-ml-models/notebook
